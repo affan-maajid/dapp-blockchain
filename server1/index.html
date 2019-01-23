@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>
+        Blockchain App
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        let socket = io.connect();  //io('http://127.0.0.1:8000');
+
+
+        socket.on('formStatus', function(data) {
+            $('#statusText').text(data);
+        });
+
+    </script>
+
+</head>
+
+<body>
+<div class="row">
+    <div class="col-md-4">
+    </div>
+
+
+    <div class="col-md-4">
+        <br>
+        <form action="/" method="post">
+            From:<br>
+            <input type="text" name="from"><br><br>
+            To:<br>
+            <input type="text" name="to"><br><br>
+            Amount:<br>
+            <input type="text" name="amount"><br><br>
+            Description:<br>
+            <input type="text" name="desc"><br><br>
+            Status:<br>
+            <div id="status"><h6 id="statusText"></h6></div><br><br>
+            <!--<input type="text" name=""><br>-->
+            <input type="submit" value="Send Transaction"><br>
+            <!--<button type="submit">Submit</button>-->
+        </form>
+
+    </div>
+
+
+    <div class="col-md-4">
+    </div>
+
+
+</div>
+</body>
+</html>
