@@ -11,3 +11,4 @@ The chances of a server being chosen to add a new block to the chain are proport
 * Socket.IO
 * crypto-js
 * random-js
+* jQuery
