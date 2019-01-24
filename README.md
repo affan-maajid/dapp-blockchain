@@ -6,6 +6,8 @@ In this project, 3 servers were created using Node.js environment to serve the a
 
 The chances of a server being chosen to add a new block to the chain are proportional to the number of blocks it has added to the blockchain in the past. The more blocks a server adds to the blockchain, the more wealth (points/coins) it gathers and the higher its chances of being chosen to add another block to the blockchain in the future.
 
+### Uses:
+Node.js
 #### Frameworks & Libraries Used:
 * Express.js
 * Socket.IO
